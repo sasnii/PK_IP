@@ -1,0 +1,117 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="484,1430" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="494,1365" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="App/Web Recorder" sap:VirtualizedContainerService.HintSize="452,1275" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard CloseMode="{x:Null}" OpenMode="{x:Null}" DisplayName="Use Browser Chrome: https://www.google.com/" sap:VirtualizedContainerService.HintSize="412,1164" sap2010:WorkflowViewState.IdRef="NApplicationCard_2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,949" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ClickBeforeMode="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyFieldMode="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Type into the Google Search Field" DisplayName="Type Into Google Search" sap:VirtualizedContainerService.HintSize="358,196" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="bucharest current time">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="724, 434, 447, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;&lt;webctrl name='q' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;&lt;webctrl name='q' tag='INPUT' type='text' aaname='Szukaj' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcMAAAAmCAYAAAC4ePBbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAChSURBVHhe7dUBAQAACMMg+5e+QQYluAFAnAwByJMhAHkyBCBPhgDkyRCAPBkCkCdDAPJkCECeDAHIkyEAeTIEIE+GAOTJEIA8GQKQJ0MA8mQIQJ4MAciTIQB5MgQgT4YA5MkQgDwZApAnQwDyZAhAngwByJMhAHkyBCBPhgDkyRCAPBkCkCdDAPJkCECeDAHIkyEAeTIEIE+GAOTJEIC47QH108vPExFu/gAAAABJRU5ErkJggg==" InformativeScreenshot="4b2377de44a98aebe1b369a4f34ed36e.png" SearchSteps="FuzzySelector, Image" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Click Enter to Search query" sap:VirtualizedContainerService.HintSize="358,138" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
+              <uix:NGetText DisplayName="Get curreny time in Bucharest" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NGetText_1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.google.com/search?sxsrf=ALeKk01JHCrX6Ihhr8GHILt4r4XZyXgcEg%3A1587898822089&amp;source=hp&amp;ei=xmmlXpjaAq6XlwTJoLGIDA&amp;q=bucharest+current+time&amp;oq=bucharest+current+time&amp;gs_lcp=CgZwc3ktYWIQAzIFCAAQywEyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yCAgAEBYQChAeMggIABAWEAoQHjoHCCMQ6gIQJzoECCMQJzoFCAAQgwE6AggAOgQIABAKOggIABAIEA0QHlCZlQNYtpwDYOTiBGgGcAB4AIABZYgBhg2SAQQyMS4xmAEAoAEBqgEHZ3dzLXdperABCg&amp;sclient=psy-ab&amp;ved=0ahUKEwiY1eiJ-IXpAhWuy4UKHUlQDMEQ4dUDCAc&amp;uact=5" DesignTimeRectangle="205, 304, 618, 38" ElementType="Text" FriendlyName="'DIV'" FullSelectorArgument="&lt;html app='chrome.exe' title='bucharest current time - Szukaj w Google' /&gt;&lt;webctrl aaname='14:01' parentid='rso' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='bucharest current time - Szukaj w Google' /&gt;&lt;webctrl aaname='14:01' parentid='rso' tag='DIV' type='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAm4AAAAqCAYAAAAK/tdAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS/SURBVHhe7d2xSyNZAMfx+1fSDVgELK5bq0tluOLsBIuARUC4wDbLwRKEI6QRK1k45GAZFpYgLEQ4sDiYQphGYuUWh6liIVgIKYQUgd9OkjfJRDNmHJPLPPl+4DWTmWew+jKTN+8nAQAAwAqEGwAAgCUINwAAAEsQbgAAAJYg3AAAACxBuAEAAFiCcAMAALAE4QYAAGAJwg0AAMASLwu3m4ZKuZxyuZpa5lA6PbXqhWCeRcwV0e/q6vRAlZ2C8sO5g7Fe0Pb7Y3ntrjkphX5HjdJovtqFOQYAAPA/Sx5ud56qv5gYemVs9S5qKoRhtahwC75fbdMxc84ajoqHvrp9c35S/Tt5+2FkEm4AAGB1EoVb7z9X5fVoBL0ith581d4taK7QQ0u1cVTmlN+pyj315Z97atRL+nlt8lnh05W5KIGHa7l7+fG1g0G4AQCAVXk+3Ppdtf7anjx2HI+0sdWT9/HxXbHXhltPrcPwjpijrSDMeuaTsam7hVty2+b4M7qXx9qeitXRINwAAMCqzA63INiu/z2aGS6jkS62uv9U5Ayv39DG+K7bK8Ptvqly+L1+c3Ud9yj0+9H48ayz7z+NO6Pb9nS0M32XLToINwAAsCozw+3upPQoWPIqf/F0bH6gnyq2BgsbzCPL0ld//GP/14bbIAbD71k+fW4BQlfNvfBvVuXNKrfbcPHFZOT3XHl/T/4fhBsAAFiVOeHmqPiHq9bt8Gj62BqsytwdPSJ1dhvq9JPP1aqH5wWj/vjMwaPX8POSGsPvGe/6c9Gc6+jg0hyMioSbs/lB7sXd8HA0ZAk3AACwKrPD7VtFpXrDBFsofbh1vprwWQvi6mZwZFHhdi3312TzDPm18Vylk1GUTbltqrJbU8MEW4hwAwAAWfD84oQpKcOt7WpreI2j0rcwiBYVbi3Vws9KjWDWOYLvUoydKx7hBgAAsmC54da/0pFZzensNiNhlf7u3ZTob9KShFv0fMINAABYZonhFnlNx1pFZ/fm8NASwi1JiEXP//1MSfdSINwAAEAWLC3cJrsjOKo+WcKZgXBLcofOINwAAEAWLCfcIjsZOB+9Ge9M444bAADASy0h3Hry/9wYnfeuJv/BHJ6yhHDjN24AAOCNW3i49byq2R2hEERO3P4ECwq34Mq0q0qdQ8INAADYZcHhFj0nzZj/Et1pkfe4rR3MD8B573GLQbgBAIAssDzcpndOaM5psbk7J8Qg3AAAQBYsONx66lz68s/njaZq4x0PyjoeH2+pE/d0NUZ0r9Knq1ejot8/Zq/SGIQbAADIgiUsTkhigXPdN1U2UTX4nVunb44/9v3IvJ4kJ2ffn7HSNR7hBgAAssD+cAsSrFU3q1iDUaj76j6OtztPVfN6klxuS27bHE+IcAMAAFmQ+XB7fq9SI/LeuMFwNis6OPHkn3tqHFZUXJt8Vvh0ZS5KjnADAABZ8DbCbeDmTB82ncm5T4aj4uGMu3EJEG4AACAL3k64DfS7ujo9UGWnoHx4zXpB2++P5bWT7pPwFOEGAACy4AXhBgAAgFUi3AAAACxBuAEAAFiCcAMAALAE4QYAAGAJwg0AAMAShBsAAIAlCDcAAABLEG4AAACWINwAAACsIP0AjRlGs2H8VKEAAAAASUVORK5CYII=" InformativeScreenshot="71eae3ce5375364a584e93c82afee708.png" SearchSteps="FuzzySelector, Image" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of ExcelValue)("current_time")]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="358,138" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" RequiresInitialization="True" Shortcuts="[d(hk)][d(alt)][k(f4)][u(alt)][u(hk)]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358,60" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[string.Format(&quot;Obecny czas w Bukareszcie to: {0}&quot;, Saved.Values(Of ExcelValue)(&quot;current_time&quot;))]" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARHSURBVFhHvZddbBRVFMf7YrAq+OSbD6Kgb0qUUh60xq9VtA8k1EJrH1CsGIM+GLUmBA0kFi0WSMCHLcVCTMO2GmjFCiUFpH60sUjMEtIGLaAWama32w92dt2vOf7PndPd3M7sdmobf8k/M/fec8//zJ07s7NFXrEsawlUnclkmqEBaAxKisLS14yYKo6VafMHyR5A4hYoTh5BbAw6iLnLJc3cQZ7bkKQRSttp5w7mpqBdKKRY0noDE+7HxEuSZ94gVxA5l0n6wiDwYUwIyVyN9I0RMls/p4l33qDwi8+R4VtNxjOlFF7no/G3XyfzcBOlR/6UaB3kNHBYITbuyJU7zNOj12ly+/tkPL2KjKdKCgsxkx++p+bMhIvIuxIYuB0BjmWPn+qi0Atl7mYFFCp/nP45e0qy5IAH3w7nnsBAo8RkMY8cck3uVVMN2yWTDrwaxNYGFfGjpu12vnK3pKxIbRVFD+yj+DdHKd51DOf7KfJatRYztbueyLIkmw68UtqtQEeLjCl4s4Wef0xLyBqrWUuJ8/0S5SQx0EfhDeV0c/+n0pMfeDYrc5zfiYb2konufdNhPr7lZbKmpiQiP5YZlbPCwNPEKizm5a+WPoUVG6ZU9yKarLsna86PXGYiIhELB7zX8/I3S1uRuVpPqZ5blMx9d1FozUqKnzwuowsLvP1cwIC0FelffNkCWImjS4lSKRldWODdzwWMSVuR6r1bKyB9sUpG3Hnyo6hnnb2kXwi8DS4gKW1F6vQirYDM79tkxB03o3xq/VGz4gIS/2sBLecSMstmuoCwtBWOWxDcICPuuBnlU3u/YwXULdA34YVntQJGeh+kZGbum/CKkXEUcG7QsQfUJpzxGH6cNT/etZQeDayljuEeGfVOoC/pKGB0Qn81w9vPLyJtm1uxqxTrKab6jkdoZWCdkq/jFQrHxyVidm7GLarYa2rmG/0xGc0B70ouYAkq0Ub39O3Imk+rpvtdmkjM/ipO4iet7khcM2e1Oe+/icMd6vcAjYN2t82NqEFlX73kKKL8683Ue/28RDm5PH6NNnUGYDipmfNqxBKO5W9S5gxWYTk6tB1y4lqvo4BpVXz7FjVeaKH2yyfoy99O0mfBVnq1ZyuVBCrUeOmhOnrik7+yBXw/pH/XwisJz/vE3gadu2Q8yxdDnQ5zrypp3Uhlu392PPsMvHaKbQ7082f4RTskR/cfP+B21LiaFFJpWyUdCHZKlhzw+BWHW8VWB8uyDAH89aoxaoZo6097aFWbvcSzafOZD2gwMiyzcyD33zjcK3buIGCFWxEMb87Dg8doy3c7aE1nLa1ur1RX6uvYRLWnt6m9MBS5ItE6bI4LfEhsCiMrEZS58wa5eNkLX/lMUEQxJjZA//ljAHP5j+tOnLrfcy/IavA/Yn5xeIJjoSbM1R+1+YBki6H1SOyH+iEDSoj4nPv8iKlEDfYbblaKiv4FoeF/NqqvoEMAAAAASUVORK5CYII=" InformativeScreenshot="40cc1eeb28d0975ae43f4e47d386cc83.png" Selector="&lt;html app='chrome.exe' title='Google'/&gt;" Url="https://www.google.com/" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </ueab:SequenceX>
+</Activity>
